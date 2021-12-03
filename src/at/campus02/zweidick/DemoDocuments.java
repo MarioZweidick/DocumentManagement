@@ -6,7 +6,7 @@ public class DemoDocuments
 {
     public static void main(String[] args)
     {
-        Document normalDoc = new Document("Document1.dat");
+        //Document normalDoc = new Document("Document1.dat");
         TextDocument textDocument  = new TextDocument("text1.txt", "This is a test!");
         ImageDocument imageDocument = new ImageDocument("Image1.png", 300, 200, "blue");
         CsvDocument csvDocument = new CsvDocument("Lines.csv", new ArrayList<>());
@@ -18,19 +18,19 @@ public class DemoDocuments
         csvDocument.addLine("This is line 3!");
         csvDocument.addLine("This is line 4!");
 
-        normalDoc.printDocument();
+        //normalDoc.printDocument();
         textDocument.printDocument();
         imageDocument.printDocument();
         csvDocument.printDocument();
 
-        manager.addDocument(normalDoc);
+        //manager.addDocument(normalDoc);
         manager.addDocument(textDocument);
         manager.addDocument(imageDocument);
         manager.addDocument(csvDocument);
 
         manager.printAll();
 
-        manager.findDocument("Document1.dat").printDocument();
+        manager.findDocument("Image1.png").printDocument();
 
     }
 
